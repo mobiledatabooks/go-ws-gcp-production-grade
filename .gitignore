@@ -11,9 +11,7 @@ tst.bash
 upl.bash
 deploy.bash
 c.out
-pkg/fizzbuzz/c.out
-pkg/fizzbuzz/doc.md
-pkg/fizzbuzz/tst.bash
+
 # Test binary, built with `go test -c`
 *.test
 
@@ -26,6 +24,5 @@ pkg/fizzbuzz/tst.bash
 .vscode
 key.json
 observed.txt
-go-parametrized-fizzbuzz
-main
+
 .DS_Store
