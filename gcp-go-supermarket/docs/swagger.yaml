@@ -1,0 +1,98 @@
+basePath: /api/v1
+info:
+  contact: {}
+paths:
+  /add:
+    post:
+      consumes:
+      - application/json
+      description: Add an item(s). Expects JSON array. Send single item in array
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "400":
+          description: Bad Request
+          schema:
+            type: string
+      summary: Add Item
+      tags:
+      - example
+  /delete/:code:
+    get:
+      consumes:
+      - application/json
+      description: Get individual item by code
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "400":
+          description: Bad Request
+          schema:
+            type: string
+      summary: Get Item
+      tags:
+      - example
+  /item/:code:
+    get:
+      consumes:
+      - application/json
+      description: 'Get individual item by code like this: A12T-4GH7-QPL9-3N4M'
+      parameters:
+      - description: Code
+        in: path
+        name: code
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "400":
+          description: Bad Request
+          schema:
+            type: string
+      summary: Get Item
+      tags:
+      - example
+  /items:
+    get:
+      consumes:
+      - application/json
+      description: List all items
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+      summary: List Items
+      tags:
+      - example
+  /ping:
+    get:
+      consumes:
+      - application/json
+      description: do ping
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+      summary: ping
+      tags:
+      - example
+swagger: "2.0"
